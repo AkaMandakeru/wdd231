@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diretório de Membros | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Curitiba, com endereço, telefone, site e nível de associação de cada membro.">
+  <meta name="author" content="Jean Felipe da Silva">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Diretório de Membros da Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Conheça as empresas associadas à Câmara de Comércio de Curitiba e encontre contatos, endereços e sites de cada uma.">
+  <meta property="og:image" content="https://akamandakeru.github.io/wdd231/camara/imagens/og-camara-curitiba.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo da Câmara de Comércio de Curitiba com o texto Diretório de Membros">
+  <meta property="og:url" content="https://akamandakeru.github.io/wdd231/camara/diretorio.html">
+
+  <link rel="icon" href="imagens/favicon.ico" sizes="any">
+  <link rel="icon" href="imagens/logo-camara.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/camara.css">
+  <link rel="stylesheet" href="estilos/maior.css">
+
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/diretorio.js" defer></script>
+  <script src="scripts/rodape.js" defer></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a class="marca" href="index.html">
+        <img class="logotipo" src="imagens/logo-camara.svg" alt="" width="56" height="56">
+        <span class="marca-texto">
+          <span class="marca-nome">Curitiba</span>
+          <span class="marca-subtitulo">Câmara de Comércio</span>
+        </span>
+      </a>
+
+      <button class="botao-menu" id="botaoMenu" type="button" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu de navegação">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
+      </button>
+
+      <nav class="navegacao" id="menuPrincipal" aria-label="Navegação principal">
+        <ul class="lista-navegacao">
+          <li><a href="index.html">Início</a></li>
+          <li><a class="ativo" href="diretorio.html" aria-current="page">Diretório</a></li>
+          <li><a href="associe-se.html">Associe-se</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="topo-diretorio">
+      <h1>Diretório de Membros</h1>
+
+      <div class="alternar-exibicao" role="group" aria-label="Forma de exibição dos membros">
+        <button class="botao-exibicao selecionado" id="botaoGrade" type="button" aria-pressed="true">
+          <svg class="icone-botao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/>
+          </svg>
+          Grade
+        </button>
+        <button class="botao-exibicao" id="botaoLista" type="button" aria-pressed="false">
+          <svg class="icone-botao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M3 4h18v3H3zm0 6.5h18v3H3zM3 17h18v3H3z"/>
+          </svg>
+          Lista
+        </button>
+      </div>
+    </div>
+
+    <p class="introducao">
+      Encontre as empresas e organizações associadas à Câmara de Comércio de Curitiba.
+      Escolha entre a visualização em grade ou em lista.
+    </p>
+
+    <div class="membros exibicao-grade" id="membros"></div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <address class="rodape-contato">
+        <strong class="rodape-titulo">Câmara de Comércio de Curitiba</strong>
+        <span class="rodape-linha">Rua Emiliano Perneta, 297 – Centro</span>
+        <span class="rodape-linha">Curitiba – PR, 80420-080</span>
+        <a class="rodape-linha" href="mailto:contato@camaracuritiba.org.br">contato@camaracuritiba.org.br</a>
+        <a class="rodape-linha" href="tel:+554133225000">(41) 3322-5000</a>
+      </address>
+
+      <div class="rodape-redes">
+        <a class="rede" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Câmara de Comércio de Curitiba no YouTube">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81M9.55 15.57V8.43L15.82 12z"/>
+          </svg>
+        </a>
+        <a class="rede" href="https://x.com/" target="_blank" rel="noopener" aria-label="Câmara de Comércio de Curitiba no X">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.6l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/>
+          </svg>
+        </a>
+        <a class="rede" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Câmara de Comércio de Curitiba no LinkedIn">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13M7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="rodape-desenvolvimento">
+        <p><strong>Projeto de Aula WDD 231</strong></p>
+        <p>Jean Felipe da Silva</p>
+        <p>&copy; <span id="anoAtual"></span> Câmara de Comércio de Curitiba</p>
+        <p id="ultimaModificacao">Última Modificação:</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

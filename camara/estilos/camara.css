@@ -1,0 +1,479 @@
+/* Câmara de Comércio de Curitiba - estilos base (mobile-first, a partir de 320px) */
+
+:root {
+  --primaria: #1e4d2b;
+  --secundaria: #2e7d4f;
+  --destaque: #e9b949;
+  --rodape: #163a22;
+  --fundo: #f4f6f1;
+  --superficie: #ffffff;
+  --faixa: #e8f0e9;
+  --texto: #1d2721;
+  --texto-suave: #4a5a50;
+  --texto-claro: #d9e8dc;
+  --borda: #d2ddd4;
+  --ouro: #e9b949;
+  --prata: #c9d1cc;
+  --membro: #cfe5d5;
+  --sombra: 0 2px 10px rgba(30, 77, 43, 0.1);
+  --fonte-titulo: "Montserrat", "Trebuchet MS", sans-serif;
+  --fonte-texto: "Open Sans", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primaria);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--secundaria);
+  outline-offset: 2px;
+}
+
+.cabecalho :focus-visible,
+.rodape :focus-visible {
+  outline-color: var(--destaque);
+}
+
+/* ----- Cabeçalho e navegação ----- */
+
+.cabecalho {
+  border-bottom: 4px solid var(--destaque);
+  background-color: var(--primaria);
+  color: var(--superficie);
+}
+
+.cabecalho-interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--superficie);
+  text-decoration: none;
+}
+
+.logotipo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.marca-texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.marca-nome {
+  font-family: var(--fonte-titulo);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.marca-subtitulo {
+  color: var(--texto-claro);
+  font-size: 0.85rem;
+}
+
+.botao-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  padding: 0.65rem;
+  border: 2px solid var(--texto-claro);
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-menu:hover {
+  background-color: var(--secundaria);
+}
+
+.barra {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--superficie);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.botao-menu[aria-expanded="true"] .barra:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.botao-menu[aria-expanded="true"] .barra:nth-child(2) {
+  opacity: 0;
+}
+
+.botao-menu[aria-expanded="true"] .barra:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navegacao {
+  display: none;
+  flex-basis: 100%;
+}
+
+.navegacao.aberto {
+  display: block;
+}
+
+.lista-navegacao {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-navegacao a {
+  display: block;
+  padding: 0.8rem 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--superficie);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.lista-navegacao a:hover {
+  background-color: var(--secundaria);
+}
+
+.lista-navegacao .ativo {
+  border-left: 5px solid var(--destaque);
+  background-color: var(--rodape);
+}
+
+/* ----- Conteúdo principal ----- */
+
+.conteudo {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.topo-diretorio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.topo-diretorio h1 {
+  margin: 0;
+  color: var(--primaria);
+  font-size: 1.75rem;
+}
+
+.introducao {
+  max-width: 60ch;
+  margin: 0.75rem 0 1.5rem;
+  color: var(--texto-suave);
+}
+
+.alternar-exibicao {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.botao-exibicao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--primaria);
+  border-radius: 8px;
+  background-color: var(--superficie);
+  color: var(--primaria);
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.botao-exibicao:hover {
+  background-color: var(--faixa);
+}
+
+.botao-exibicao.selecionado {
+  background-color: var(--primaria);
+  color: var(--superficie);
+}
+
+.icone-botao {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ----- Membros: estrutura comum ----- */
+
+.membros {
+  display: grid;
+  gap: 1rem;
+}
+
+.membro {
+  min-width: 0;
+  background-color: var(--superficie);
+}
+
+.membro p {
+  margin: 0;
+}
+
+.membro-nome {
+  margin: 0;
+  color: var(--texto);
+  font-size: 1.15rem;
+}
+
+.membro-slogan {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.membro-nivel {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.1rem 0.65rem;
+  border-radius: 999px;
+  background-color: var(--membro);
+  color: var(--primaria);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nivel-2 .membro-nivel {
+  background-color: var(--prata);
+  color: var(--texto);
+}
+
+.nivel-3 .membro-nivel {
+  background-color: var(--ouro);
+  color: var(--texto);
+}
+
+.membro-endereco,
+.membro-contato {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.membro-contato a,
+.membro-site a {
+  overflow-wrap: anywhere;
+}
+
+.membro-site a {
+  font-weight: 600;
+}
+
+.mensagem-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fdecea;
+  color: #7a1f1a;
+}
+
+/* ----- Membros: visualização em grade (cartões) ----- */
+
+.exibicao-grade .membro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  border: 1px solid var(--borda);
+  border-top: 6px solid var(--secundaria);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+
+.exibicao-grade .nivel-2 {
+  border-top-color: #a9b3ad;
+}
+
+.exibicao-grade .nivel-3 {
+  border-top-color: var(--ouro);
+}
+
+.exibicao-grade .membro-logo {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 16px;
+}
+
+.exibicao-grade .membro-identificacao {
+  width: 100%;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--borda);
+}
+
+.exibicao-grade .membro-site {
+  margin-top: auto;
+}
+
+/* ----- Membros: visualização em lista (linhas com listras) ----- */
+
+.exibicao-lista {
+  gap: 0;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.exibicao-lista .membro {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--borda);
+}
+
+.exibicao-lista .membro:last-child {
+  border-bottom: none;
+}
+
+.exibicao-lista .membro:nth-child(odd) {
+  background-color: var(--faixa);
+}
+
+.exibicao-lista .membro-logo,
+.exibicao-lista .membro-slogan {
+  display: none;
+}
+
+.exibicao-lista .membro-nome {
+  font-size: 1.05rem;
+}
+
+.exibicao-lista .membro-nivel {
+  margin-top: 0.25rem;
+}
+
+/* ----- Rodapé ----- */
+
+.rodape {
+  border-top: 4px solid var(--destaque);
+  background-color: var(--rodape);
+  color: var(--superficie);
+}
+
+.rodape-conteudo {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.rodape a {
+  color: var(--superficie);
+}
+
+.rodape-contato {
+  font-style: normal;
+}
+
+.rodape-titulo {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--destaque);
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+}
+
+.rodape-linha {
+  display: block;
+  width: fit-content;
+  font-size: 0.95rem;
+}
+
+.rodape-redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rede {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.rodape .rede:hover {
+  background-color: var(--destaque);
+  color: var(--rodape);
+}
+
+.icone {
+  width: 24px;
+  height: 24px;
+}
+
+.rodape-desenvolvimento p {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none;
+  }
+}

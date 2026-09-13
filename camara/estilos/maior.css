@@ -1,0 +1,95 @@
+/* Câmara de Comércio de Curitiba - ajustes para telas maiores (Media Queries) */
+
+@media screen and (min-width: 40rem) {
+
+  .conteudo {
+    padding: 2rem;
+  }
+
+  .topo-diretorio h1 {
+    font-size: 2.25rem;
+  }
+
+  .exibicao-grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Lista: nome e endereço na primeira linha, contatos e site na segunda */
+  .exibicao-lista .membro {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 0.5rem 1.25rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+
+  /* ----- Navegação horizontal ----- */
+
+  .cabecalho-interno {
+    flex-wrap: nowrap;
+    padding: 1rem 2rem;
+  }
+
+  .logotipo {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .marca-nome {
+    font-size: 1.6rem;
+  }
+
+  .botao-menu {
+    display: none;
+  }
+
+  .navegacao {
+    display: block;
+    flex-basis: auto;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+
+  .lista-navegacao a {
+    padding: 0.5rem 0.9rem;
+    border-top: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .lista-navegacao .ativo {
+    border-left: none;
+    border-bottom-color: var(--destaque);
+    background-color: transparent;
+  }
+
+  /* ----- Rodapé em três colunas ----- */
+
+  .rodape-conteudo {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    padding: 2.5rem 2rem;
+  }
+
+  .rodape-desenvolvimento {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+
+  .exibicao-grade {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .exibicao-lista .membro {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.5fr) minmax(0, 1.3fr) minmax(0, 1.1fr);
+  }
+}
