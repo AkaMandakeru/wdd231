@@ -6,13 +6,53 @@
     padding: 2rem;
   }
 
+  .conteudo-inicio {
+    padding-top: 0;
+  }
+
+  /* ----- Página inicial ----- */
+
+  .hero {
+    margin: 0 0 2rem;
+    border-radius: 0 0 var(--raio) var(--raio);
+    overflow: hidden;
+  }
+
+  .hero-chamada {
+    padding: 1.5rem 2rem 1.75rem;
+  }
+
+  .hero-titulo {
+    font-size: 2rem;
+  }
+
+  .paineis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .painel-eventos {
+    grid-column: 1 / -1;
+  }
+
+  .secao-titulo {
+    font-size: 1.75rem;
+  }
+
+  /* ----- Diretório e destaques ----- */
+
   .topo-diretorio h1 {
     font-size: 2.25rem;
   }
 
   .exibicao-grade {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
+  }
+
+  /* Com duas colunas, o terceiro destaque ocupa a linha inteira */
+  .destaques .membro:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   /* Lista: nome e endereço na primeira linha, contatos e site na segunda */
@@ -84,9 +124,39 @@
 
 @media screen and (min-width: 64rem) {
 
-  .exibicao-grade {
-    grid-template-columns: repeat(3, 1fr);
+  /* ----- Página inicial: chamada sobre a imagem e painéis lado a lado ----- */
+
+  .hero-chamada {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    max-width: 28rem;
+    border-radius: var(--raio);
+    background-color: rgba(22, 58, 34, 0.92);
+  }
+
+  .hero-titulo {
+    font-size: 2.1rem;
+  }
+
+  .paineis {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: 1.5rem;
+  }
+
+  .painel-eventos {
+    grid-column: auto;
+  }
+
+  /* ----- Diretório e destaques ----- */
+
+  .exibicao-grade {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .destaques .membro:last-child:nth-child(odd) {
+    grid-column: auto;
   }
 
   .exibicao-lista .membro {

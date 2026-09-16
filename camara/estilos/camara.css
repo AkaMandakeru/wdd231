@@ -15,6 +15,7 @@
   --ouro: #e9b949;
   --prata: #c9d1cc;
   --membro: #cfe5d5;
+  --raio: 12px;
   --sombra: 0 2px 10px rgba(30, 77, 43, 0.1);
   --fonte-titulo: "Montserrat", "Trebuchet MS", sans-serif;
   --fonte-texto: "Open Sans", "Segoe UI", sans-serif;
@@ -36,7 +37,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--fonte-titulo);
   line-height: 1.2;
 }
@@ -56,8 +58,42 @@ img {
 }
 
 .cabecalho :focus-visible,
+.hero-chamada :focus-visible,
 .rodape :focus-visible {
   outline-color: var(--destaque);
+}
+
+/* ----- Componentes compartilhados ----- */
+
+.lista-navegacao,
+.lista-eventos,
+.lista-previsao {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.painel,
+.exibicao-grade .membro {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.topo-diretorio h1,
+.secao-titulo {
+  margin: 0;
+  color: var(--primaria);
+}
+
+.mensagem-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fdecea;
+  color: #7a1f1a;
 }
 
 /* ----- Cabeçalho e navegação ----- */
@@ -160,9 +196,6 @@ img {
 .lista-navegacao {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .lista-navegacao a {
@@ -192,6 +225,223 @@ img {
   padding: 1.5rem 1rem 3rem;
 }
 
+/* ----- Página inicial: imagem principal e chamada para ação ----- */
+
+.conteudo-inicio {
+  padding-top: 0;
+}
+
+.hero {
+  position: relative;
+  margin: 0 -1rem 1.5rem;
+  background-color: var(--rodape);
+}
+
+.hero-imagem {
+  display: block;
+  width: 100%;
+}
+
+.hero-chamada {
+  padding: 1.25rem 1rem 1.5rem;
+  color: var(--superficie);
+}
+
+.hero-titulo {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.hero-texto {
+  margin: 0 0 1rem;
+  color: var(--texto-claro);
+}
+
+.botao-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--destaque);
+  color: var(--texto);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.botao-cta:hover {
+  background-color: var(--superficie);
+}
+
+/* ----- Página inicial: painéis de eventos, tempo e previsão ----- */
+
+.paineis {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.painel {
+  overflow: hidden;
+}
+
+.painel-titulo {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background-color: var(--primaria);
+  color: var(--superficie);
+  font-size: 1.1rem;
+}
+
+.painel-corpo {
+  padding: 1rem;
+}
+
+.painel-nota {
+  margin: 0.75rem 0 0;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.evento {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.evento:first-child {
+  padding-top: 0;
+}
+
+.evento:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.evento-data {
+  display: flex;
+  flex: 0 0 3.75rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3.75rem;
+  border-radius: 10px;
+  background-color: var(--faixa);
+  color: var(--primaria);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.evento-dia {
+  font-size: 1.35rem;
+}
+
+.evento-mes {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.evento-nome {
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+}
+
+.evento-info {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.tempo-principal {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Fundo escuro: os ícones do OpenWeatherMap são claros e sumiriam sobre o branco */
+.tempo-icone {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--secundaria);
+}
+
+.tempo-temperatura,
+.tempo-descricao {
+  margin: 0;
+}
+
+.tempo-temperatura {
+  color: var(--primaria);
+  font-family: var(--fonte-titulo);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.tempo-descricao {
+  font-weight: 600;
+}
+
+.tempo-detalhes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1rem;
+  margin: 1rem 0 0;
+}
+
+.tempo-detalhes dt {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.tempo-detalhes dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.lista-previsao li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.lista-previsao li:first-child {
+  padding-top: 0;
+}
+
+.lista-previsao li:last-child {
+  border-bottom: none;
+}
+
+.previsao-dia {
+  font-weight: 600;
+}
+
+.previsao-temperaturas {
+  color: var(--texto-suave);
+  white-space: nowrap;
+}
+
+.previsao-temperaturas strong {
+  color: var(--texto);
+  font-size: 1.15rem;
+}
+
+.secao-titulo {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* ----- Diretório: topo e alternância de exibição ----- */
+
 .topo-diretorio {
   display: flex;
   flex-wrap: wrap;
@@ -201,8 +451,6 @@ img {
 }
 
 .topo-diretorio h1 {
-  margin: 0;
-  color: var(--primaria);
   font-size: 1.75rem;
 }
 
@@ -248,7 +496,7 @@ img {
   height: 1.25rem;
 }
 
-/* ----- Membros: estrutura comum ----- */
+/* ----- Membros: estrutura comum (diretório e destaques) ----- */
 
 .membros {
   display: grid;
@@ -314,15 +562,6 @@ img {
   font-weight: 600;
 }
 
-.mensagem-status {
-  grid-column: 1 / -1;
-  margin: 0;
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: #fdecea;
-  color: #7a1f1a;
-}
-
 /* ----- Membros: visualização em grade (cartões) ----- */
 
 .exibicao-grade .membro {
@@ -331,10 +570,7 @@ img {
   align-items: center;
   gap: 0.6rem;
   padding: 1.25rem;
-  border: 1px solid var(--borda);
   border-top: 6px solid var(--secundaria);
-  border-radius: 12px;
-  box-shadow: var(--sombra);
   text-align: center;
 }
 
@@ -367,7 +603,7 @@ img {
 .exibicao-lista {
   gap: 0;
   border: 1px solid var(--borda);
-  border-radius: 12px;
+  border-radius: var(--raio);
   overflow: hidden;
 }
 
