@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Associe-se | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Peça a associação da sua empresa à Câmara de Comércio de Curitiba: preencha o formulário e conheça os benefícios dos níveis NP, Bronze, Prata e Ouro.">
+  <meta name="author" content="Jean Felipe da Silva">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Associe-se à Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Formulário de pedido de associação da Câmara de Comércio de Curitiba, com os benefícios de cada nível: NP, Bronze, Prata e Ouro.">
+  <meta property="og:image" content="https://akamandakeru.github.io/wdd231/camara/imagens/og-camara-curitiba.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo da Câmara de Comércio de Curitiba">
+  <meta property="og:url" content="https://akamandakeru.github.io/wdd231/camara/associacao.html">
+
+  <link rel="icon" href="imagens/favicon.ico" sizes="any">
+  <link rel="icon" href="imagens/logo-camara.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/camara.css">
+  <link rel="stylesheet" href="estilos/maior.css">
+
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/rodape.js" defer></script>
+  <script type="module" src="scripts/associacao.mjs"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a class="marca" href="index.html">
+        <img class="logotipo" src="imagens/logo-camara.svg" alt="" width="56" height="56">
+        <span class="marca-texto">
+          <span class="marca-nome">Curitiba</span>
+          <span class="marca-subtitulo">Câmara de Comércio</span>
+        </span>
+      </a>
+
+      <button class="botao-menu" id="botaoMenu" type="button" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu de navegação">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
+      </button>
+
+      <nav class="navegacao" id="menuPrincipal" aria-label="Navegação principal">
+        <ul class="lista-navegacao">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
+          <li><a class="ativo" href="associacao.html" aria-current="page">Associe-se</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <h1 class="secao-titulo">Associe-se à Câmara</h1>
+
+    <p class="introducao">
+      Preencha o pedido de associação e escolha o nível que combina com a sua organização.
+      Nossa equipe responde em até dois dias úteis.
+    </p>
+
+    <div class="area-associacao">
+      <section class="area-formulario" aria-labelledby="tituloFormulario">
+        <h2 class="subtitulo" id="tituloFormulario">Pedido de associação</h2>
+
+        <form class="formulario" method="get" action="agradecimento.html">
+          <fieldset>
+            <legend>Seus dados</legend>
+
+            <div class="campos">
+              <label class="campo" for="primeiroNome">
+                <span class="rotulo">Nome <span class="obrigatorio" aria-hidden="true">*</span></span>
+                <input type="text" id="primeiroNome" name="primeiro-nome" title="Digite seu primeiro nome" autocomplete="given-name" required>
+              </label>
+
+              <label class="campo" for="sobrenome">
+                <span class="rotulo">Sobrenome <span class="obrigatorio" aria-hidden="true">*</span></span>
+                <input type="text" id="sobrenome" name="sobrenome" title="Digite seu sobrenome" autocomplete="family-name" required>
+              </label>
+
+              <label class="campo campo-largo" for="cargo">
+                <span class="rotulo">Cargo na organização</span>
+                <input type="text" id="cargo" name="cargo-na-organizacao" title="Use apenas letras, hífens e espaços, com no mínimo 7 caracteres" autocomplete="organization-title" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\- ]{7,}$">
+                <span class="ajuda">Apenas letras, hífens e espaços, com no mínimo 7 caracteres.</span>
+              </label>
+
+              <label class="campo" for="email">
+                <span class="rotulo">E-mail <span class="obrigatorio" aria-hidden="true">*</span></span>
+                <input type="email" id="email" name="email" title="Digite um endereço de e-mail válido" autocomplete="email" placeholder="nome@exemplo.com.br" required>
+              </label>
+
+              <label class="campo" for="celular">
+                <span class="rotulo">Celular <span class="obrigatorio" aria-hidden="true">*</span></span>
+                <input type="tel" id="celular" name="celular" title="Digite seu celular com DDD" autocomplete="tel" placeholder="(41) 99999-0000" required>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Sua organização</legend>
+
+            <div class="campos">
+              <label class="campo" for="organizacao">
+                <span class="rotulo">Nome da organização <span class="obrigatorio" aria-hidden="true">*</span></span>
+                <input type="text" id="organizacao" name="organizacao" title="Digite o nome da sua empresa ou organização" autocomplete="organization" required>
+              </label>
+
+              <label class="campo" for="nivel">
+                <span class="rotulo">Nível de associação <span class="obrigatorio" aria-hidden="true">*</span></span>
+                <select id="nivel" name="nivel" title="Escolha o nível de associação desejado" required>
+                  <option value="">Escolha um nível</option>
+                  <option value="np">Associação NP, sem fins lucrativos (np)</option>
+                  <option value="bronze">Associação Bronze (bronze)</option>
+                  <option value="silver">Associação Prata (silver)</option>
+                  <option value="gold">Associação Ouro (gold)</option>
+                </select>
+              </label>
+
+              <label class="campo campo-largo" for="descricao">
+                <span class="rotulo">Descrição da organização</span>
+                <textarea id="descricao" name="descricao" title="Conte o que a sua organização faz" rows="5"></textarea>
+              </label>
+            </div>
+          </fieldset>
+
+          <p class="nota-obrigatorio"><span class="obrigatorio" aria-hidden="true">*</span> Campos obrigatórios.</p>
+
+          <input type="hidden" id="dataHora" name="data-hora">
+
+          <button class="botao-enviar" type="submit">Enviar pedido de associação</button>
+        </form>
+      </section>
+
+      <section class="area-niveis" aria-labelledby="tituloNiveis">
+        <h2 class="subtitulo" id="tituloNiveis">Níveis de associação</h2>
+
+        <ul class="lista-niveis">
+          <li class="cartao-nivel cartao-np">
+            <h3 class="cartao-titulo">Associação NP</h3>
+            <p class="cartao-taxa">Sem taxa</p>
+            <p class="cartao-resumo">Para organizações sem fins lucrativos.</p>
+            <button class="botao-nivel" type="button" data-dialogo="dialogoNp">Saiba mais</button>
+          </li>
+
+          <li class="cartao-nivel cartao-bronze">
+            <h3 class="cartao-titulo">Associação Bronze</h3>
+            <p class="cartao-taxa">R$ 40 por mês</p>
+            <p class="cartao-resumo">O primeiro passo para quem está começando.</p>
+            <button class="botao-nivel" type="button" data-dialogo="dialogoBronze">Saiba mais</button>
+          </li>
+
+          <li class="cartao-nivel cartao-prata">
+            <h3 class="cartao-titulo">Associação Prata</h3>
+            <p class="cartao-taxa">R$ 90 por mês</p>
+            <p class="cartao-resumo">Mais visibilidade e treinamentos inclusos.</p>
+            <button class="botao-nivel" type="button" data-dialogo="dialogoPrata">Saiba mais</button>
+          </li>
+
+          <li class="cartao-nivel cartao-ouro">
+            <h3 class="cartao-titulo">Associação Ouro</h3>
+            <p class="cartao-taxa">R$ 180 por mês</p>
+            <p class="cartao-resumo">Destaque na página inicial e todos os benefícios.</p>
+            <button class="botao-nivel" type="button" data-dialogo="dialogoOuro">Saiba mais</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <dialog class="dialogo-nivel" id="dialogoNp" aria-labelledby="tituloDialogoNp">
+      <div class="dialogo-topo">
+        <h2 class="dialogo-titulo" id="tituloDialogoNp">Associação NP</h2>
+        <button class="fechar-dialogo" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <div class="dialogo-corpo">
+        <p>Benefícios para organizações sem fins lucrativos:</p>
+        <ul class="lista-beneficios">
+          <li>Cadastro gratuito no diretório de membros</li>
+          <li>Participação nos encontros mensais de networking</li>
+          <li>Divulgação de campanhas no boletim da câmara</li>
+          <li>Acesso às oficinas abertas de gestão</li>
+        </ul>
+        <p class="dialogo-taxa">Taxa: gratuita</p>
+      </div>
+    </dialog>
+
+    <dialog class="dialogo-nivel" id="dialogoBronze" aria-labelledby="tituloDialogoBronze">
+      <div class="dialogo-topo">
+        <h2 class="dialogo-titulo" id="tituloDialogoBronze">Associação Bronze</h2>
+        <button class="fechar-dialogo" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <div class="dialogo-corpo">
+        <p>Tudo do nível NP, e mais:</p>
+        <ul class="lista-beneficios">
+          <li>Perfil da empresa no diretório com logotipo e site</li>
+          <li>10% de desconto nos eventos da câmara</li>
+          <li>Duas vagas nos treinamentos trimestrais</li>
+          <li>Indicação nas consultas de fornecedores locais</li>
+        </ul>
+        <p class="dialogo-taxa">Taxa: R$ 40 por mês</p>
+      </div>
+    </dialog>
+
+    <dialog class="dialogo-nivel" id="dialogoPrata" aria-labelledby="tituloDialogoPrata">
+      <div class="dialogo-topo">
+        <h2 class="dialogo-titulo" id="tituloDialogoPrata">Associação Prata</h2>
+        <button class="fechar-dialogo" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <div class="dialogo-corpo">
+        <p>Tudo do nível Bronze, e mais:</p>
+        <ul class="lista-beneficios">
+          <li>Empresa sorteada entre os destaques da página inicial</li>
+          <li>25% de desconto nos eventos da câmara</li>
+          <li>Treinamentos ilimitados para a equipe</li>
+          <li>Convite para a rodada anual de negócios</li>
+          <li>Consultoria de exportação com hora reduzida</li>
+        </ul>
+        <p class="dialogo-taxa">Taxa: R$ 90 por mês</p>
+      </div>
+    </dialog>
+
+    <dialog class="dialogo-nivel" id="dialogoOuro" aria-labelledby="tituloDialogoOuro">
+      <div class="dialogo-topo">
+        <h2 class="dialogo-titulo" id="tituloDialogoOuro">Associação Ouro</h2>
+        <button class="fechar-dialogo" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <div class="dialogo-corpo">
+        <p>Tudo do nível Prata, e mais:</p>
+        <ul class="lista-beneficios">
+          <li>Prioridade entre os destaques da página inicial</li>
+          <li>Eventos da câmara sem custo para dois participantes</li>
+          <li>Estande reservado na Feira do Empreendedor</li>
+          <li>Reportagem anual no boletim da câmara</li>
+          <li>Assessoria jurídica e contábil de plantão</li>
+          <li>Convite para o jantar de diretoria</li>
+        </ul>
+        <p class="dialogo-taxa">Taxa: R$ 180 por mês</p>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <address class="rodape-contato">
+        <strong class="rodape-titulo">Câmara de Comércio de Curitiba</strong>
+        <span class="rodape-linha">Rua Emiliano Perneta, 297 – Centro</span>
+        <span class="rodape-linha">Curitiba – PR, 80420-080</span>
+        <a class="rodape-linha" href="mailto:contato@camaracuritiba.org.br">contato@camaracuritiba.org.br</a>
+        <a class="rodape-linha" href="tel:+554133225000">(41) 3322-5000</a>
+      </address>
+
+      <div class="rodape-redes">
+        <a class="rede" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Câmara de Comércio de Curitiba no YouTube">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81M9.55 15.57V8.43L15.82 12z"/>
+          </svg>
+        </a>
+        <a class="rede" href="https://x.com/" target="_blank" rel="noopener" aria-label="Câmara de Comércio de Curitiba no X">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.6l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/>
+          </svg>
+        </a>
+        <a class="rede" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Câmara de Comércio de Curitiba no LinkedIn">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13M7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="rodape-desenvolvimento">
+        <p><strong>Projeto de Aula WDD 231</strong></p>
+        <p>Jean Felipe da Silva</p>
+        <p>&copy; <span id="anoAtual"></span> Câmara de Comércio de Curitiba</p>
+        <p id="ultimaModificacao">Última Modificação:</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -635,6 +635,342 @@ img {
   margin-top: 0.25rem;
 }
 
+/* ----- Associe-se: formulário ----- */
+
+.subtitulo {
+  margin: 0 0 1rem;
+  color: var(--primaria);
+  font-size: 1.25rem;
+}
+
+.area-associacao {
+  display: grid;
+  gap: 2rem;
+}
+
+.formulario fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0.5rem 1.25rem 1.25rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.formulario legend {
+  padding: 0 0.5rem;
+  color: var(--primaria);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+}
+
+.campos {
+  display: grid;
+  gap: 1rem;
+}
+
+.campo {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+}
+
+.rotulo {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.obrigatorio {
+  color: #a4262c;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background-color: var(--superficie);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.campo textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.campo input:hover,
+.campo select:hover,
+.campo textarea:hover {
+  border-color: var(--secundaria);
+}
+
+.ajuda {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.nota-obrigatorio {
+  margin: 0 0 1.25rem;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.botao-enviar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primaria);
+  color: var(--superficie);
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-enviar:hover {
+  background-color: var(--secundaria);
+}
+
+/* ----- Associe-se: cartões dos níveis ----- */
+
+.lista-niveis {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Os cartões surgem um após o outro quando a página abre, chamando a atenção
+   para os níveis sem competir com a leitura do formulário. */
+@keyframes surgir-cartao {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cartao-nivel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--borda);
+  border-left: 6px solid var(--secundaria);
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+  box-shadow: var(--sombra);
+  animation: surgir-cartao 0.7s ease-out both;
+}
+
+.cartao-nivel:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.cartao-nivel:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.cartao-nivel:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.cartao-bronze {
+  border-left-color: #8a5a2b;
+}
+
+.cartao-prata {
+  border-left-color: #a9b3ad;
+}
+
+.cartao-ouro {
+  border-left-color: var(--ouro);
+}
+
+.cartao-titulo {
+  margin: 0;
+  color: var(--primaria);
+  font-size: 1.1rem;
+}
+
+.cartao-taxa {
+  margin: 0;
+  font-weight: 700;
+}
+
+.cartao-resumo {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.botao-nivel {
+  align-self: start;
+  min-height: 44px;
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primaria);
+  border-radius: 8px;
+  background-color: var(--superficie);
+  color: var(--primaria);
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.botao-nivel:hover {
+  background-color: var(--primaria);
+  color: var(--superficie);
+}
+
+/* ----- Associe-se: modais com os benefícios ----- */
+
+.dialogo-nivel {
+  width: min(92vw, 30rem);
+  padding: 0;
+  border: none;
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+  color: var(--texto);
+  box-shadow: 0 10px 35px rgba(22, 58, 34, 0.35);
+}
+
+.dialogo-nivel::backdrop {
+  background-color: rgba(22, 58, 34, 0.65);
+}
+
+.dialogo-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--primaria);
+  color: var(--superficie);
+}
+
+.dialogo-titulo {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.fechar-dialogo {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--texto-claro);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--superficie);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.fechar-dialogo:hover {
+  background-color: var(--secundaria);
+}
+
+.dialogo-topo :focus-visible {
+  outline-color: var(--destaque);
+}
+
+.dialogo-corpo {
+  padding: 1.25rem;
+}
+
+.dialogo-corpo p {
+  margin: 0;
+}
+
+.lista-beneficios {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+}
+
+.lista-beneficios li {
+  margin-bottom: 0.35rem;
+}
+
+.dialogo-taxa {
+  color: var(--primaria);
+  font-weight: 700;
+}
+
+/* ----- Agradecimento: resumo do pedido ----- */
+
+.agradecimento {
+  max-width: 45rem;
+}
+
+.resumo-pedido {
+  margin: 0 0 2rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+.resumo-linha {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--borda);
+}
+
+.resumo-linha:last-child {
+  border-bottom: none;
+}
+
+.resumo-linha:nth-child(odd) {
+  background-color: var(--faixa);
+}
+
+.resumo-rotulo {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.resumo-valor {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.acoes-agradecimento {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.voltar {
+  font-weight: 600;
+}
+
 /* ----- Rodapé ----- */
 
 .rodape {
@@ -711,5 +1047,6 @@ img {
   *::before,
   *::after {
     transition: none;
+    animation: none;
   }
 }

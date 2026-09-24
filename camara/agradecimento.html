@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diretório de Membros | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Curitiba, com endereço, telefone, site e nível de associação de cada membro.">
+  <title>Obrigado | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Confirmação do pedido de associação à Câmara de Comércio de Curitiba, com o resumo dos dados enviados pelo formulário de associação.">
   <meta name="author" content="Jean Felipe da Silva">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Diretório de Membros da Câmara de Comércio de Curitiba">
-  <meta property="og:description" content="Conheça as empresas associadas à Câmara de Comércio de Curitiba e encontre contatos, endereços e sites de cada uma.">
+  <meta property="og:title" content="Pedido recebido pela Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Recebemos o seu pedido de associação à Câmara de Comércio de Curitiba. Veja o resumo dos dados enviados e os próximos passos.">
   <meta property="og:image" content="https://akamandakeru.github.io/wdd231/camara/imagens/og-camara-curitiba.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Logotipo da Câmara de Comércio de Curitiba com o texto Diretório de Membros">
-  <meta property="og:url" content="https://akamandakeru.github.io/wdd231/camara/diretorio.html">
+  <meta property="og:image:alt" content="Logotipo da Câmara de Comércio de Curitiba">
+  <meta property="og:url" content="https://akamandakeru.github.io/wdd231/camara/agradecimento.html">
 
   <link rel="icon" href="imagens/favicon.ico" sizes="any">
   <link rel="icon" href="imagens/logo-camara.svg" type="image/svg+xml">
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="estilos/maior.css">
 
   <script src="scripts/navegacao.js" defer></script>
-  <script type="module" src="scripts/diretorio.mjs"></script>
   <script src="scripts/rodape.js" defer></script>
+  <script type="module" src="scripts/agradecimento.mjs"></script>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
       <nav class="navegacao" id="menuPrincipal" aria-label="Navegação principal">
         <ul class="lista-navegacao">
           <li><a href="index.html">Início</a></li>
-          <li><a class="ativo" href="diretorio.html" aria-current="page">Diretório</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
           <li><a href="associacao.html">Associe-se</a></li>
           <li><a href="sobre.html">Sobre</a></li>
         </ul>
@@ -63,31 +63,23 @@
   </header>
 
   <main class="conteudo">
-    <div class="topo-diretorio">
-      <h1>Diretório de Membros</h1>
+    <section class="agradecimento" aria-labelledby="tituloAgradecimento">
+      <h1 class="secao-titulo" id="tituloAgradecimento">Obrigado pelo seu pedido!</h1>
 
-      <div class="alternar-exibicao" role="group" aria-label="Forma de exibição dos membros">
-        <button class="botao-exibicao selecionado" id="botaoGrade" type="button" aria-pressed="true">
-          <svg class="icone-botao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/>
-          </svg>
-          Grade
-        </button>
-        <button class="botao-exibicao" id="botaoLista" type="button" aria-pressed="false">
-          <svg class="icone-botao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M3 4h18v3H3zm0 6.5h18v3H3zM3 17h18v3H3z"/>
-          </svg>
-          Lista
-        </button>
-      </div>
-    </div>
+      <p class="introducao">
+        Recebemos o seu pedido de associação. Nossa equipe confere os dados e responde
+        em até dois dias úteis pelo e-mail informado.
+      </p>
 
-    <p class="introducao">
-      Encontre as empresas e organizações associadas à Câmara de Comércio de Curitiba.
-      Escolha entre a visualização em grade ou em lista.
-    </p>
+      <h2 class="subtitulo">Resumo do que você enviou</h2>
 
-    <div class="membros exibicao-grade" id="membros"></div>
+      <dl class="resumo-pedido" id="resumoPedido"></dl>
+
+      <p class="acoes-agradecimento">
+        <a class="botao-cta" href="diretorio.html">Conhecer os membros</a>
+        <a class="voltar" href="index.html">Voltar à página inicial</a>
+      </p>
+    </section>
   </main>
 
   <footer class="rodape">
