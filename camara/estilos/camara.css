@@ -971,6 +971,162 @@ img {
   font-weight: 600;
 }
 
+/* ----- Sobre: mensagem da visita e números da cidade ----- */
+
+.aviso-visita {
+  margin: 0 0 1.25rem;
+  padding: 0.85rem 1rem;
+  border-left: 5px solid var(--destaque);
+  border-radius: 8px;
+  background-color: var(--faixa);
+  color: var(--primaria);
+  font-weight: 600;
+}
+
+.numeros-cidade {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 2rem;
+}
+
+.numero {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+}
+
+.numero dt {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.numero dd {
+  margin: 0;
+  color: var(--primaria);
+  font-family: var(--fonte-titulo);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.subtitulo-galeria {
+  margin-bottom: 1rem;
+}
+
+/* ----- Sobre: galeria de pontos de interesse ----- */
+
+.galeria {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Tela pequena (até 640px): tudo empilhado dentro do cartão. */
+.cartao-local {
+  display: grid;
+  grid-template-areas:
+    "titulo"
+    "imagem"
+    "descricao"
+    "endereco"
+    "botao";
+  gap: 0.6rem;
+  padding: 1.25rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.titulo-local {
+  grid-area: titulo;
+  margin: 0;
+  color: var(--primaria);
+  font-size: 1.2rem;
+}
+
+.figura-local {
+  grid-area: imagem;
+  margin: 0;
+}
+
+.imagem-local {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 8px;
+}
+
+.descricao-local {
+  grid-area: descricao;
+  margin: 0;
+}
+
+.endereco-local {
+  grid-area: endereco;
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.botao-local {
+  grid-area: botao;
+  min-height: 44px;
+  margin-top: 0.4rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primaria);
+  color: var(--superficie);
+  font-family: var(--fonte-titulo);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-local:hover {
+  background-color: var(--secundaria);
+}
+
+.dialogo-endereco {
+  margin: 0 0 0.75rem;
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+.dialogo-site {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* ----- Sobre: créditos das fotos ----- */
+
+.creditos {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--borda);
+}
+
+.creditos h2 {
+  margin: 0 0 0.75rem;
+  color: var(--primaria);
+  font-size: 1.1rem;
+}
+
+.lista-creditos {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.lista-creditos li {
+  margin-bottom: 0.3rem;
+}
+
 /* ----- Rodapé ----- */
 
 .rodape {

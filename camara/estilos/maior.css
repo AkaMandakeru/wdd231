@@ -85,6 +85,46 @@
   }
 }
 
+/* Tela média da página Sobre: 641px a 1024px, conforme a tarefa da semana 05.
+   O cartão troca de áreas nomeadas: imagem à esquerda, texto à direita. */
+@media screen and (min-width: 641px) {
+
+  .numeros-cidade {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cartao-local {
+    grid-template-areas:
+      "titulo titulo"
+      "imagem descricao"
+      "imagem endereco"
+      "botao botao";
+    grid-template-columns: 300px minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto auto;
+    gap: 0.6rem 1.25rem;
+  }
+
+  .endereco-local {
+    align-self: end;
+  }
+
+  /* O efeito de passar o mouse fica só fora da visualização móvel. */
+  .figura-local {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .imagem-local {
+    max-width: none;
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .figura-local:hover .imagem-local {
+    transform: scale(1.08);
+    filter: saturate(1.2) contrast(1.05);
+  }
+}
+
 @media screen and (min-width: 50rem) {
 
   /* ----- Navegação horizontal ----- */
@@ -202,5 +242,18 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     align-items: baseline;
     gap: 1rem;
+  }
+}
+
+/* Tela grande da página Sobre: 1025px e acima, com dois cartões por linha. */
+@media screen and (min-width: 1025px) {
+
+  .galeria {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .numeros-cidade {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
