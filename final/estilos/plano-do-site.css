@@ -1,0 +1,385 @@
+/* Planejamento do site Pokémon Card Collector - usa o esquema de cores e a tipografia do plano */
+
+:root {
+  --azul-noite: #16233f;
+  --amarelo: #f2b705;
+  --branco-gelo: #f7f8fa;
+  --grafite: #22252a;
+  --texto-suave: #4a5260;
+  --borda: #d6dae2;
+  --raio: 10px;
+  --fonte-titulo: "Rubik", "Trebuchet MS", sans-serif;
+  --fonte-texto: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--branco-gelo);
+  color: var(--grafite);
+  font-family: var(--fonte-texto);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--azul-noite);
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--azul-noite);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background-color: #e8ebf1;
+  font-size: 0.95em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
+
+/* ----- Cabeçalho ----- */
+
+.cabecalho {
+  border-bottom: 5px solid var(--amarelo);
+  background-color: var(--azul-noite);
+  color: var(--branco-gelo);
+}
+
+.cabecalho-interno {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.cabecalho h1 {
+  margin: 0.3rem 0;
+  color: var(--branco-gelo);
+  font-size: 1.9rem;
+}
+
+.selo {
+  margin: 0;
+  color: var(--amarelo);
+  font-family: var(--fonte-titulo);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subtitulo-cabecalho {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+/* ----- Índice das seções ----- */
+
+.indice {
+  border-bottom: 1px solid var(--borda);
+  background-color: #ffffff;
+}
+
+.indice ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  list-style: none;
+}
+
+.indice a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.indice a:hover {
+  background-color: var(--amarelo);
+  color: var(--grafite);
+}
+
+/* ----- Conteúdo ----- */
+
+.conteudo {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.secao {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--borda);
+}
+
+.secao:last-child {
+  border-bottom: none;
+}
+
+.secao h2 {
+  margin: 0 0 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 6px solid var(--amarelo);
+  font-size: 1.5rem;
+}
+
+.secao h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.destaque-nome {
+  margin: 0 0 1rem;
+  color: var(--azul-noite);
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nota {
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--azul-noite);
+  background-color: #eef1f6;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.cenarios li {
+  margin-bottom: 0.6rem;
+}
+
+/* ----- Tabelas ----- */
+
+.tabela {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 0.98rem;
+}
+
+.tabela caption {
+  margin-bottom: 0.5rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.tabela th,
+.tabela td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--borda);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabela thead th {
+  background-color: var(--azul-noite);
+  color: var(--branco-gelo);
+  font-family: var(--fonte-titulo);
+}
+
+.tabela tbody th {
+  background-color: #eef1f6;
+}
+
+/* ----- Paleta de cores ----- */
+
+.paleta {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.amostra {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 6.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  font-family: var(--fonte-titulo);
+}
+
+.amostra-nome {
+  font-weight: 700;
+}
+
+.amostra-codigo {
+  font-size: 0.9rem;
+}
+
+.amostra-azul {
+  background-color: var(--azul-noite);
+  color: var(--branco-gelo);
+}
+
+.amostra-amarelo {
+  background-color: var(--amarelo);
+  color: var(--grafite);
+}
+
+.amostra-gelo {
+  background-color: var(--branco-gelo);
+  color: var(--grafite);
+}
+
+.amostra-grafite {
+  background-color: var(--grafite);
+  color: var(--branco-gelo);
+}
+
+/* ----- Exemplos de tipografia ----- */
+
+.exemplo-fonte {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: #ffffff;
+}
+
+.exemplo-fonte h3 {
+  margin-top: 0.5rem;
+}
+
+.exemplo-amostra {
+  margin: 0;
+  color: var(--azul-noite);
+}
+
+.exemplo-titulo .exemplo-amostra {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.exemplo-corpo .exemplo-amostra {
+  font-family: var(--fonte-texto);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ----- Wireframes ----- */
+
+.wireframes {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1rem 0;
+}
+
+.wireframe {
+  margin: 0;
+}
+
+.wireframe img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--grafite);
+  border-radius: var(--raio);
+}
+
+.wireframe-mapa {
+  margin-top: 1.5rem;
+}
+
+.espaco-reservado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 12rem;
+  padding: 1.5rem;
+  border: 2px dashed var(--texto-suave);
+  border-radius: var(--raio);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.espaco-reservado p {
+  margin: 0;
+}
+
+.wireframe figcaption {
+  margin-top: 0.5rem;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ----- Rodapé ----- */
+
+.rodape {
+  border-top: 5px solid var(--amarelo);
+  background-color: var(--azul-noite);
+  color: var(--branco-gelo);
+}
+
+.rodape-conteudo {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 1.75rem 1rem;
+}
+
+.rodape p {
+  margin: 0 0 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* ----- Telas maiores ----- */
+
+@media screen and (min-width: 48rem) {
+
+  .cabecalho-interno {
+    padding: 2.5rem 2rem;
+  }
+
+  .cabecalho h1 {
+    font-size: 2.3rem;
+  }
+
+  .conteudo {
+    padding: 2rem 2rem 3.5rem;
+  }
+
+  .paleta {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .wireframes {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    align-items: start;
+  }
+
+  .indice ul,
+  .rodape-conteudo {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

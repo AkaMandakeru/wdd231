@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento do Site | Pokémon Card Collector</title>
+  <meta name="description" content="Documento de planejamento do site Pokémon Card Collector: nome, finalidade, cenários do público-alvo, esquema de cores, tipografia e wireframes da página inicial.">
+  <meta name="author" content="Jean Felipe da Silva">
+
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/plano-do-site.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <p class="selo">WDD 231 &middot; Projeto Individual</p>
+      <h1>Planejamento do Site</h1>
+      <p class="subtitulo-cabecalho">Pokémon Card Collector</p>
+    </div>
+  </header>
+
+  <nav class="indice" aria-label="Seções do documento">
+    <ul>
+      <li><a href="#nome">Nome</a></li>
+      <li><a href="#finalidade">Finalidade</a></li>
+      <li><a href="#cenarios">Cenários</a></li>
+      <li><a href="#cores">Cores</a></li>
+      <li><a href="#tipografia">Tipografia</a></li>
+      <li><a href="#wireframe">Wireframe</a></li>
+    </ul>
+  </nav>
+
+  <main class="conteudo">
+    <section class="secao" id="nome">
+      <h2>Nome do Site</h2>
+
+      <p class="destaque-nome">Pokémon Card Collector</p>
+
+      <p>
+        O nome diz exatamente o que o site faz: reunir e organizar uma coleção de cartas do
+        Pokémon Trading Card Game. Ele usa dois termos que o público-alvo já procura em inglês,
+        <em>card</em> e <em>collector</em>, o que ajuda na busca e na identidade visual, já que o
+        logotipo nasce da ideia de um álbum de cartas.
+      </p>
+
+      <p class="nota">
+        Disponibilidade de domínio (opcional): <strong>pokemoncardcollector.com.br</strong>.
+        Pokémon é marca registrada da Nintendo, da Creatures e da Game Freak. Este é um projeto
+        escolar, sem fins comerciais, e o site traz essa informação no rodapé, junto com o crédito
+        à API usada.
+      </p>
+    </section>
+
+    <section class="secao" id="finalidade">
+      <h2>Finalidade do Site</h2>
+
+      <p>
+        O site é um álbum digital de cartas do Pokémon TCG. Ele busca os dados das cartas em uma
+        API pública e deixa a pessoa montar a própria coleção direto no navegador, sem cadastro e
+        sem servidor.
+      </p>
+
+      <h3>O que o site oferece</h3>
+
+      <ul>
+        <li>Pesquisa de cartas por nome e por coleção, com os dados vindos da API.</li>
+        <li>
+          Ficha de cada carta com nome, imagem, tipo, HP, ataques, raridade, ilustrador e a
+          coleção a que pertence.
+        </li>
+        <li>Botão para adicionar e remover cartas da coleção pessoal.</li>
+        <li>
+          Coleção salva no <code>localStorage</code>, que continua lá quando a pessoa fecha e
+          reabre a página.
+        </li>
+        <li>Resumo da coleção: quantas cartas foram guardadas e quais raridades aparecem.</li>
+        <li>Formulário para pedir a lista de trocas das cartas repetidas.</li>
+      </ul>
+
+      <h3>Público-alvo</h3>
+
+      <p>
+        Pessoas que colecionam cartas do Pokémon TCG no Brasil, principalmente quem está voltando
+        a colecionar e precisa saber o que já tem antes de comprar ou trocar.
+      </p>
+
+      <h3>Páginas previstas</h3>
+
+      <table class="tabela">
+        <caption>Três páginas do site, além da página de ação do formulário</caption>
+        <thead>
+          <tr>
+            <th scope="col">Página</th>
+            <th scope="col">Arquivo</th>
+            <th scope="col">Conteúdo principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Início</td>
+            <td><code>index.html</code></td>
+            <td>Apresentação, busca rápida, cartas em destaque e resumo da coleção salva.</td>
+          </tr>
+          <tr>
+            <td>Cartas</td>
+            <td><code>cartas.html</code></td>
+            <td>
+              Catálogo com no mínimo 15 cartas vindas da API, filtro por coleção e tipo, e modal
+              com a ficha completa de cada carta.
+            </td>
+          </tr>
+          <tr>
+            <td>Minha coleção</td>
+            <td><code>colecao.html</code></td>
+            <td>
+              Cartas guardadas pela pessoa, com o resumo por raridade e o formulário da lista de
+              trocas.
+            </td>
+          </tr>
+          <tr>
+            <td>Lista enviada</td>
+            <td><code>lista-enviada.html</code></td>
+            <td>Página de ação do formulário, que mostra os dados preenchidos.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Fonte de dados</h3>
+
+      <p>
+        A fonte principal é a <strong>API TCGdex</strong>
+        (<code>https://api.tcgdex.net/v2/pt/cards</code>), que não exige chave e devolve os dados
+        em português, inclusive raridade e tipo. A <strong>API Pokémon TCG</strong>
+        (<code>https://api.pokemontcg.io/v2/cards</code>) fica como alternativa. Um arquivo JSON
+        local com cartas em destaque serve de reserva para o bloco <code>try...catch</code>, para
+        que a página continue útil se a API estiver fora do ar.
+      </p>
+    </section>
+
+    <section class="secao" id="cenarios">
+      <h2>Cenários</h2>
+
+      <p>Perguntas que o público-alvo chega fazendo ao site:</p>
+
+      <ol class="cenarios">
+        <li>"Quais cartas de Charizard existem em português e em quais coleções elas saíram?"</li>
+        <li>"Essa carta que eu acabei de abrir no pacote é rara? Quem foi o ilustrador dela?"</li>
+        <li>"Quantas cartas eu já guardei no meu álbum e quais ainda faltam?"</li>
+        <li>"Como eu mostro a lista das minhas cartas repetidas para alguém que quer trocar?"</li>
+      </ol>
+    </section>
+
+    <section class="secao" id="cores">
+      <h2>Esquema de Cores</h2>
+
+      <p>
+        A paleta vem do próprio verso das cartas do Pokémon TCG: azul-escuro com o amarelo da
+        marca. O azul sustenta as áreas de navegação e o amarelo marca só o que pede ação, para
+        não competir com as imagens coloridas das cartas.
+      </p>
+
+      <ul class="paleta">
+        <li class="amostra amostra-azul"><span class="amostra-nome">Azul-noite</span><span class="amostra-codigo">#16233F</span></li>
+        <li class="amostra amostra-amarelo"><span class="amostra-nome">Amarelo-relâmpago</span><span class="amostra-codigo">#F2B705</span></li>
+        <li class="amostra amostra-gelo"><span class="amostra-nome">Branco-gelo</span><span class="amostra-codigo">#F7F8FA</span></li>
+        <li class="amostra amostra-grafite"><span class="amostra-nome">Grafite</span><span class="amostra-codigo">#22252A</span></li>
+      </ul>
+
+      <table class="tabela">
+        <caption>Onde cada cor é usada e o contraste medido</caption>
+        <thead>
+          <tr>
+            <th scope="col">Cor</th>
+            <th scope="col">Código</th>
+            <th scope="col">Onde é usada</th>
+            <th scope="col">Contraste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Azul-noite</th>
+            <td><code>#16233F</code></td>
+            <td>Fundo do cabeçalho e do rodapé, títulos h1 a h3 e borda das fichas de carta.</td>
+            <td>14,7:1 com o branco-gelo</td>
+          </tr>
+          <tr>
+            <th scope="row">Amarelo-relâmpago</th>
+            <td><code>#F2B705</code></td>
+            <td>
+              Botões principais, item ativo da navegação e selo de raridade. O texto sobre ele é
+              sempre grafite.
+            </td>
+            <td>8,5:1 com o grafite</td>
+          </tr>
+          <tr>
+            <th scope="row">Branco-gelo</th>
+            <td><code>#F7F8FA</code></td>
+            <td>Fundo das páginas e das fichas, para dar descanso em volta das imagens.</td>
+            <td>14,5:1 com o grafite</td>
+          </tr>
+          <tr>
+            <th scope="row">Grafite</th>
+            <td><code>#22252A</code></td>
+            <td>Texto corrido, listas e rótulos do formulário.</td>
+            <td>14,5:1 com o branco-gelo</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="nota">
+        Os contrastes foram conferidos pela fórmula da WCAG e passam no nível AAA para texto
+        normal, que exige 7:1.
+      </p>
+    </section>
+
+    <section class="secao" id="tipografia">
+      <h2>Tipografia</h2>
+
+      <p>
+        Duas fontes do Google Fonts, uma para chamar atenção e outra para ler sem cansar.
+      </p>
+
+      <div class="exemplo-fonte exemplo-titulo">
+        <p class="exemplo-amostra">Pokémon Card Collector</p>
+        <h3>Rubik</h3>
+        <p>
+          Usada nos títulos, no nome do site e nos botões, nos pesos 500 e 700. Tem letras largas
+          e cantos levemente arredondados, que lembram o estilo das cartas sem imitar a marca.
+        </p>
+      </div>
+
+      <div class="exemplo-fonte exemplo-corpo">
+        <p class="exemplo-amostra">Charizard &middot; Fogo &middot; 180 HP &middot; Ultra Rara</p>
+        <h3>Source Sans 3</h3>
+        <p>
+          Usada no texto corrido, nas listas, nas fichas das cartas e nos campos do formulário,
+          nos pesos 400 e 600. É uma fonte de leitura feita para tela, legível em 320px e com
+          números fáceis de distinguir, o que importa nos valores de HP.
+        </p>
+      </div>
+    </section>
+
+    <section class="secao" id="wireframe">
+      <h2>Wireframe</h2>
+
+      <p>
+        Esboço em preto e branco da página inicial, na tela pequena e na tela grande. O objetivo é
+        decidir a estrutura antes das cores e das imagens.
+      </p>
+
+      <div class="wireframes">
+        <figure class="wireframe">
+          <!-- Troque o bloco abaixo pela foto do seu esboço, ajustando width e height:
+               <img src="imagens/wireframe-pequeno.webp" alt="Wireframe da página inicial na tela pequena: cabeçalho com o nome do site e menu hambúrguer, campo de busca, cartas em destaque empilhadas em uma coluna e rodapé." width="400" height="700" loading="lazy"> -->
+          <div class="espaco-reservado">
+            <p><strong>Tela pequena (320–430px)</strong></p>
+            <p>Esboço à mão ainda a incluir, em <code>imagens/wireframe-pequeno.webp</code></p>
+          </div>
+          <figcaption>Tela pequena: uma coluna, menu hambúrguer e cartas empilhadas.</figcaption>
+        </figure>
+
+        <figure class="wireframe">
+          <img src="imagens/wireframe-grande.webp" alt="Wireframe da página inicial na tela grande: cabeçalho com o nome do site e navegação horizontal com Explorar, Minha Coleção e Sobre; título de chamada; campo de busca com botão Buscar; e a área Cartas em Destaque com quatro cartas lado a lado." width="493" height="513" loading="lazy">
+          <figcaption>Tela grande: navegação horizontal, busca no topo e cartas em destaque em quatro colunas.</figcaption>
+        </figure>
+      </div>
+
+      <figure class="wireframe wireframe-mapa">
+        <img src="imagens/wireframe-telas.webp" alt="Mapa com seis telas do site em tela grande: página inicial, resultados da busca com filtros, detalhes da carta, minha coleção, estados vazios e página sobre o projeto." width="1200" height="800" loading="lazy">
+        <figcaption>
+          Mapa das demais telas em visualização grande: resultados da busca com filtros, detalhes da
+          carta, minha coleção, estados vazios e a página sobre o projeto.
+        </figcaption>
+      </figure>
+
+      <h3>O que cada esboço precisa mostrar</h3>
+
+      <ul>
+        <li>Cabeçalho com logotipo e navegação: hambúrguer na tela pequena, links na linha na tela grande.</li>
+        <li>Campo de busca de cartas logo abaixo do cabeçalho.</li>
+        <li>Área de cartas em destaque: uma coluna na tela pequena e três colunas na tela grande.</li>
+        <li>Bloco com o resumo da coleção salva no navegador.</li>
+        <li>Rodapé com autoria, link das atribuições e link do vídeo.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <p><strong>Jean Felipe da Silva</strong></p>
+      <p>WDD 231 &middot; Desenvolvimento Frontend para Web I &middot; Semana 05</p>
+      <p>Dados das cartas: API TCGdex. Pokémon é marca registrada da Nintendo, da Creatures e da Game Freak.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
