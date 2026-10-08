@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista enviada | Pokémon Card Collector</title>
+  <meta name="description" content="Confirmação da lista de trocas enviada ao Pokémon Card Collector, com o resumo dos dados preenchidos no formulário.">
+  <meta name="author" content="Jean Felipe da Silva">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Lista de trocas enviada | Pokémon Card Collector">
+  <meta property="og:description" content="Recebemos a sua lista de trocas de cartas do Pokémon TCG. Veja o resumo do que foi enviado.">
+  <meta property="og:image" content="https://akamandakeru.github.io/wdd231/final/imagens/og-collector.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo do Pokémon Card Collector: uma carta com um raio">
+  <meta property="og:url" content="https://akamandakeru.github.io/wdd231/final/lista-enviada.html">
+
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/maior.css">
+
+  <script type="module" src="scripts/navegacao.mjs"></script>
+  <script type="module" src="scripts/rodape.mjs"></script>
+  <script type="module" src="scripts/lista-enviada.mjs"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a class="marca" href="index.html">
+        <img class="marca-logo" src="imagens/favicon.svg" alt="" width="44" height="44">
+        <span class="marca-nome">Pokémon Card Collector</span>
+      </a>
+
+      <button class="botao-menu" id="botaoMenu" type="button" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu de navegação">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
+      </button>
+
+      <nav class="navegacao" id="menuPrincipal" aria-label="Navegação principal">
+        <ul class="lista-navegacao">
+          <li><a href="cartas.html">Explorar</a></li>
+          <li><a href="colecao.html">Minha Coleção</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <h1 class="titulo-pagina">Lista enviada!</h1>
+
+    <p class="introducao">
+      Obrigado. Guardamos a sua lista de trocas e entramos em contato pela forma que você escolheu.
+    </p>
+
+    <h2 class="secao-titulo">O que você enviou</h2>
+
+    <dl class="resumo-envio" id="dadosEnviados"></dl>
+
+    <p>
+      <a class="botao" href="cartas.html">Continuar explorando cartas</a>
+    </p>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <div>
+        <strong class="rodape-titulo">Pokémon Card Collector</strong>
+        <p>Projeto individual de Jean Felipe da Silva</p>
+        <p>WDD 231 &middot; Desenvolvimento Frontend para Web I</p>
+        <p>&copy; <span id="anoAtual"></span> &middot; Curitiba, Brasil</p>
+        <p id="ultimaModificacao">Última modificação:</p>
+      </div>
+
+      <div>
+        <ul class="rodape-links">
+          <li><a href="sobre.html#atribuicoes">Atribuições</a></li>
+          <!-- Troque o endereço abaixo pelo link do vídeo de demonstração. -->
+          <li><a href="https://youtu.be/" target="_blank" rel="noopener">Vídeo de demonstração</a></li>
+          <li><a href="https://tcgdex.dev/" target="_blank" rel="noopener">Dados: API TCGdex</a></li>
+        </ul>
+        <p>
+          Pokémon e Pokémon TCG são marcas registradas da Nintendo, da Creatures e da Game Freak.
+          Este é um projeto escolar, sem fins comerciais.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

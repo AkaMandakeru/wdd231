@@ -1,0 +1,598 @@
+[
+ {
+  "id": "sv03-001",
+  "nome": "Oddish",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/001",
+  "numero": "001",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 50,
+  "tipos": [
+   "Planta"
+  ],
+  "ilustrador": "Midori Harada",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Sensação Boa",
+    "custo": [
+     "Incolor"
+    ],
+    "dano": null,
+    "efeito": "Compre uma carta."
+   },
+   {
+    "nome": "Estouro",
+    "custo": [
+     "Planta"
+    ],
+    "dano": 10,
+    "efeito": ""
+   }
+  ]
+ },
+ {
+  "id": "sv03-012",
+  "nome": "Trevenant",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/012",
+  "numero": "012",
+  "raridade": "Incomum",
+  "categoria": "Pokémon",
+  "estagio": "Estágio 1",
+  "hp": 140,
+  "tipos": [
+   "Planta"
+  ],
+  "ilustrador": "Anesaki Dynamic",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Prender",
+    "custo": [
+     "Incolor",
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 100,
+    "efeito": "Durante o próximo turno do seu oponente, o Pokémon Defensor não poderá recuar."
+   }
+  ]
+ },
+ {
+  "id": "sv03-023",
+  "nome": "Capsakid",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/023",
+  "numero": "023",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 50,
+  "tipos": [
+   "Planta"
+  ],
+  "ilustrador": "Shin Nagasawa",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Carga Indomável",
+    "custo": [
+     "Incolor"
+    ],
+    "dano": 30,
+    "efeito": "Este Pokémon também causa 10 pontos de dano a si mesmo."
+   }
+  ]
+ },
+ {
+  "id": "sv03-034",
+  "nome": "Darumaka",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/034",
+  "numero": "034",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 80,
+  "tipos": [
+   "Fogo"
+  ],
+  "ilustrador": "Miki Tanaka",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Cabeçada",
+    "custo": [
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 20,
+    "efeito": ""
+   },
+   {
+    "nome": "Ataque Surpresa",
+    "custo": [
+     "Fogo",
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 70,
+    "efeito": "Jogue uma moeda. Se sair coroa, este ataque não fará nada."
+   }
+  ]
+ },
+ {
+  "id": "sv03-045",
+  "nome": "Lapras",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/045",
+  "numero": "045",
+  "raridade": "Incomum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 110,
+  "tipos": [
+   "Água"
+  ],
+  "ilustrador": "matazo",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Granizo",
+    "custo": [
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": null,
+    "efeito": "Este ataque causa 10 pontos de dano a cada um dos Pokémon do seu oponente. (Não aplique Fraqueza e Resistência aos Pokémon no Banco.)"
+   },
+   {
+    "nome": "Vento Gelado",
+    "custo": [
+     "Água",
+     "Água",
+     "Incolor"
+    ],
+    "dano": 100,
+    "efeito": ""
+   }
+  ]
+ },
+ {
+  "id": "sv03-056",
+  "nome": "Froakie",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/056",
+  "numero": "056",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 70,
+  "tipos": [
+   "Água"
+  ],
+  "ilustrador": "Atsuya Uki",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Tentativa Saltitante",
+    "custo": [
+     "Água"
+    ],
+    "dano": 30,
+    "efeito": "Jogue uma moeda. Se sair coroa, este ataque não fará nada."
+   }
+  ]
+ },
+ {
+  "id": "sv03-067",
+  "nome": "Tynamo",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/067",
+  "numero": "067",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 40,
+  "tipos": [
+   "Elétrico"
+  ],
+  "ilustrador": "Kagemaru Himeno",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Choque de Estática",
+    "custo": [
+     "Elétrico"
+    ],
+    "dano": 10,
+    "efeito": ""
+   },
+   {
+    "nome": "Corisquinho",
+    "custo": [
+     "Elétrico",
+     "Incolor"
+    ],
+    "dano": 30,
+    "efeito": ""
+   }
+  ]
+ },
+ {
+  "id": "sv03-078",
+  "nome": "Bellibolt",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/078",
+  "numero": "078",
+  "raridade": "Incomum",
+  "categoria": "Pokémon",
+  "estagio": "Estágio 1",
+  "hp": 140,
+  "tipos": [
+   "Elétrico"
+  ],
+  "ilustrador": "Toshinao Aoki",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Gume Trovejante",
+    "custo": [
+     "Elétrico",
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 100,
+    "efeito": "O dano deste ataque não é afetado por quaisquer efeitos no Pokémon Ativo do seu oponente."
+   }
+  ]
+ },
+ {
+  "id": "sv03-089",
+  "nome": "Mawile",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/089",
+  "numero": "089",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 100,
+  "tipos": [
+   "Psíquico"
+  ],
+  "ilustrador": "0313",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Mastigada Maliciosa",
+    "custo": [
+     "Psíquico"
+    ],
+    "dano": "30×",
+    "efeito": "Este ataque causa 30 pontos de dano para cada Energia {P} ligada a este Pokémon."
+   }
+  ]
+ },
+ {
+  "id": "sv03-100",
+  "nome": "Greavard",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/100",
+  "numero": "100",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 80,
+  "tipos": [
+   "Psíquico"
+  ],
+  "ilustrador": "Pani Kobayashi",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Jogo Duro",
+    "custo": [
+     "Incolor",
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": "30+",
+    "efeito": "Jogue uma moeda. Se sair cara, este ataque causará 30 pontos de dano a mais."
+   }
+  ]
+ },
+ {
+  "id": "sv03-111",
+  "nome": "Drilbur",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/111",
+  "numero": "111",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 70,
+  "tipos": [
+   "Lutador"
+  ],
+  "ilustrador": "sowsow",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Investida Ascendente",
+    "custo": [
+     "Incolor"
+    ],
+    "dano": "10+",
+    "efeito": "Jogue uma moeda. Se sair cara, este ataque causará 10 pontos de dano a mais."
+   }
+  ]
+ },
+ {
+  "id": "sv03-122",
+  "nome": "Glimmet",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/122",
+  "numero": "122",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 70,
+  "tipos": [
+   "Lutador"
+  ],
+  "ilustrador": "GIDORA",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Estilhaço Venenoso",
+    "custo": [
+     "Lutador",
+     "Lutador"
+    ],
+    "dano": 20,
+    "efeito": "O Pokémon Ativo do seu oponente agora está Envenenado."
+   }
+  ]
+ },
+ {
+  "id": "sv03-133",
+  "nome": "Houndoom",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/133",
+  "numero": "133",
+  "raridade": "Incomum",
+  "categoria": "Pokémon",
+  "estagio": "Estágio 1",
+  "hp": 130,
+  "tipos": [
+   "Sombrio"
+  ],
+  "ilustrador": "Haru Akasaka",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Golpe Ousado",
+    "custo": [
+     "Sombrio",
+     "Incolor"
+    ],
+    "dano": "50+",
+    "efeito": "Se o Pokémon Ativo do seu oponente for um Pokémon de Evolução, este ataque causará 70 pontos de dano a mais."
+   },
+   {
+    "nome": "Talho das Sombras",
+    "custo": [
+     "Sombrio",
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 130,
+    "efeito": "Descarte uma Energia deste Pokémon."
+   }
+  ]
+ },
+ {
+  "id": "sv03-144",
+  "nome": "Bronzor",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/144",
+  "numero": "144",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 70,
+  "tipos": [
+   "Metal"
+  ],
+  "ilustrador": "Shinji Kanda",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Compra Espelhada",
+    "custo": [
+     "Metal"
+    ],
+    "dano": null,
+    "efeito": "Compre cartas até ter o mesmo número de cartas na sua mão do que seu oponente."
+   },
+   {
+    "nome": "Mergulho Veloz",
+    "custo": [
+     "Metal",
+     "Metal"
+    ],
+    "dano": 30,
+    "efeito": ""
+   }
+  ]
+ },
+ {
+  "id": "sv03-155",
+  "nome": "Varoom",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/155",
+  "numero": "155",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 70,
+  "tipos": [
+   "Metal"
+  ],
+  "ilustrador": "Saya Tsuruta",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Gás Asfixiante",
+    "custo": [
+     "Metal",
+     "Incolor"
+    ],
+    "dano": 30,
+    "efeito": ""
+   }
+  ]
+ },
+ {
+  "id": "sv03-166",
+  "nome": "Eevee",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/166",
+  "numero": "166",
+  "raridade": "Comum",
+  "categoria": "Pokémon",
+  "estagio": "Básico",
+  "hp": 70,
+  "tipos": [
+   "Incolor"
+  ],
+  "ilustrador": "ryoma uratsuka",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Animar",
+    "custo": [
+     "Incolor"
+    ],
+    "dano": null,
+    "efeito": "Ligue uma carta de Energia da sua mão a 1 dos seus Pokémon."
+   },
+   {
+    "nome": "Chute",
+    "custo": [
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 20,
+    "efeito": ""
+   }
+  ]
+ },
+ {
+  "id": "sv03-177",
+  "nome": "Gumshoos",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/177",
+  "numero": "177",
+  "raridade": "Incomum",
+  "categoria": "Pokémon",
+  "estagio": "Estágio 1",
+  "hp": 120,
+  "tipos": [
+   "Incolor"
+  ],
+  "ilustrador": "Eri Yamaki",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": [
+   {
+    "nome": "Baque de Cabeça",
+    "custo": [
+     "Incolor"
+    ],
+    "dano": 30,
+    "efeito": ""
+   },
+   {
+    "nome": "Mastigada",
+    "custo": [
+     "Incolor",
+     "Incolor"
+    ],
+    "dano": 60,
+    "efeito": "Descarte uma Energia do Pokémon Ativo do seu oponente."
+   }
+  ]
+ },
+ {
+  "id": "sv03-188",
+  "nome": "Guita",
+  "imagem": "https://assets.tcgdex.net/pt/sv/sv03/188",
+  "numero": "188",
+  "raridade": "Rara",
+  "categoria": "Treinador",
+  "estagio": "",
+  "hp": null,
+  "tipos": [],
+  "ilustrador": "kirisAki",
+  "colecao": {
+   "id": "sv03",
+   "nome": "Obsidiana em Chamas",
+   "total": 197
+  },
+  "ataques": []
+ }
+]

@@ -1,0 +1,166 @@
+/* Pokémon Card Collector - ajustes para telas maiores */
+
+@media screen and (min-width: 40rem) {
+
+  .conteudo {
+    padding: 2rem 2rem 3.5rem;
+  }
+
+  .titulo-pagina {
+    font-size: 2.1rem;
+  }
+
+  .heroi {
+    padding: 2.25rem 2rem;
+  }
+
+  .heroi h1 {
+    font-size: 2.3rem;
+  }
+
+  .secao-titulo {
+    font-size: 1.5rem;
+  }
+
+  .filtros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+  }
+
+  .acoes-filtro {
+    grid-column: 1 / -1;
+  }
+
+  .controles-colecao {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: end;
+    gap: 1rem;
+  }
+
+  .barra-resultados {
+    align-items: end;
+  }
+
+  .campos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.25rem;
+  }
+
+  .campo-largo {
+    grid-column: 1 / -1;
+  }
+
+  .grade-cartas,
+  .passos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .resumo {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .linha-envio {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .rodape-conteudo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+
+  .cabecalho-interno {
+    flex-wrap: nowrap;
+    padding: 0.9rem 2rem;
+  }
+
+  .marca-nome {
+    font-size: 1.35rem;
+  }
+
+  .botao-menu {
+    display: none;
+  }
+
+  .navegacao {
+    display: block;
+    flex-basis: auto;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+
+  .lista-navegacao a {
+    padding: 0.45rem 0.9rem;
+    border-top: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .lista-navegacao .ativo {
+    border-left: none;
+    border-bottom-color: var(--amarelo);
+    background-color: transparent;
+  }
+
+  /* Na barra lateral, as caixas voltam a uma coluna. */
+  .lista-caixas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Filtros à esquerda e resultados à direita, como no wireframe. */
+  .area-cartas {
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .grade-cartas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Com a barra de filtros ao lado, a grade de resultados usa menos colunas. */
+  .painel-resultados .grade-cartas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .passos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filtros {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dialogo-corpo {
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+
+  .grade-cartas {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .painel-resultados .grade-cartas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .area-cartas {
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  }
+
+  .resumo {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

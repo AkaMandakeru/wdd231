@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Card Collector | Álbum digital de cartas do Pokémon TCG</title>
+  <meta name="description" content="Pesquise cartas do Pokémon TCG em português, veja raridade, tipo, HP e ataques, e monte a sua coleção digital direto no navegador, sem cadastro.">
+  <meta name="author" content="Jean Felipe da Silva">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Pokémon Card Collector">
+  <meta property="og:description" content="Pesquise cartas do Pokémon TCG em português e monte a sua coleção digital direto no navegador.">
+  <meta property="og:image" content="https://akamandakeru.github.io/wdd231/final/imagens/og-collector.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo do Pokémon Card Collector: uma carta com um raio">
+  <meta property="og:url" content="https://akamandakeru.github.io/wdd231/final/">
+
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/maior.css">
+
+  <script type="module" src="scripts/navegacao.mjs"></script>
+  <script type="module" src="scripts/rodape.mjs"></script>
+  <script type="module" src="scripts/inicio.mjs"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a class="marca" href="index.html" aria-current="page">
+        <img class="marca-logo" src="imagens/favicon.svg" alt="" width="44" height="44">
+        <span class="marca-nome">Pokémon Card Collector</span>
+      </a>
+
+      <button class="botao-menu" id="botaoMenu" type="button" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu de navegação">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
+      </button>
+
+      <nav class="navegacao" id="menuPrincipal" aria-label="Navegação principal">
+        <ul class="lista-navegacao">
+          <li><a href="cartas.html">Explorar</a></li>
+          <li><a href="colecao.html">Minha Coleção</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="heroi">
+      <h1>Descubra e colecione cartas do Pokémon TCG</h1>
+      <p>
+        Pesquise por nome ou coleção, veja raridade, tipo, HP e ataques de cada carta e guarde
+        as suas favoritas. A coleção fica salva no seu navegador, sem cadastro nenhum.
+      </p>
+      <div class="heroi-acoes">
+        <a class="botao" href="cartas.html">Explorar Cartas</a>
+        <a class="botao botao-contorno" href="colecao.html">Ver minha coleção</a>
+      </div>
+    </div>
+
+    <section class="secao" aria-labelledby="tituloBusca">
+      <h2 class="secao-titulo" id="tituloBusca">Busca rápida</h2>
+
+      <form class="filtros" id="buscaRapida" method="get" action="cartas.html">
+        <label class="campo campo-largo" for="buscaInicio">
+          <span class="rotulo">Nome da carta</span>
+          <input type="search" id="buscaInicio" name="busca" title="Digite o nome de um Pokémon" placeholder="Ex.: Charizard, Pikachu, Gengar" autocomplete="off">
+        </label>
+        <div class="acoes-filtro">
+          <button class="botao" type="submit">Buscar cartas</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="secao" aria-labelledby="tituloComoFunciona">
+      <h2 class="secao-titulo" id="tituloComoFunciona">Como funciona</h2>
+
+      <ol class="passos">
+        <li class="passo">
+          <h3>Pesquise</h3>
+          <p>Escolha uma coleção ou digite o nome de um Pokémon para ver as cartas em português.</p>
+        </li>
+        <li class="passo">
+          <h3>Confira os detalhes</h3>
+          <p>Abra a ficha da carta para ver ataques, ilustração, número e raridade.</p>
+        </li>
+        <li class="passo">
+          <h3>Guarde no álbum</h3>
+          <p>Clique em guardar e a carta fica salva no navegador, mesmo depois de fechar a página.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="secao" aria-labelledby="tituloDestaques">
+      <h2 class="secao-titulo" id="tituloDestaques">Cartas em destaque</h2>
+
+      <p class="mensagem" id="avisoDestaques" hidden></p>
+      <ul class="grade-cartas" id="destaques"></ul>
+    </section>
+
+    <section class="secao" aria-labelledby="tituloResumo">
+      <h2 class="secao-titulo" id="tituloResumo">Sua coleção até agora</h2>
+
+      <dl class="resumo" id="resumoColecao"></dl>
+      <p><a href="colecao.html">Abrir minha coleção</a></p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <div>
+        <strong class="rodape-titulo">Pokémon Card Collector</strong>
+        <p>Projeto individual de Jean Felipe da Silva</p>
+        <p>WDD 231 &middot; Desenvolvimento Frontend para Web I</p>
+        <p>&copy; <span id="anoAtual"></span> &middot; Curitiba, Brasil</p>
+        <p id="ultimaModificacao">Última modificação:</p>
+      </div>
+
+      <div>
+        <ul class="rodape-links">
+          <li><a href="sobre.html#atribuicoes">Atribuições</a></li>
+          <!-- Troque o endereço abaixo pelo link do vídeo de demonstração. -->
+          <li><a href="https://youtu.be/" target="_blank" rel="noopener">Vídeo de demonstração</a></li>
+          <li><a href="https://tcgdex.dev/" target="_blank" rel="noopener">Dados: API TCGdex</a></li>
+        </ul>
+        <p>
+          Pokémon e Pokémon TCG são marcas registradas da Nintendo, da Creatures e da Game Freak.
+          Este é um projeto escolar, sem fins comerciais.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="dialogo" id="dialogoCarta" aria-labelledby="tituloDialogo">
+    <div class="dialogo-topo">
+      <h2 class="dialogo-titulo" id="tituloDialogo">Detalhes da carta</h2>
+      <button class="fechar-dialogo" type="button" aria-label="Fechar">✕</button>
+    </div>
+    <div class="dialogo-corpo" id="corpoDialogo"></div>
+  </dialog>
+</body>
+
+</html>
